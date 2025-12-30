@@ -1,1 +1,192 @@
-<p>customer works!</p>
+<section
+  class="relative overflow-hidden
+         bg-gradient-to-br from-orange-50 via-white to-orange-100
+         dark:from-slate-950 dark:via-slate-900 dark:to-gray-900
+         transition-colors duration-500 ease-in-out"
+>
+  <div class="max-w-7xl mx-auto px-6 py-16">
+    <div class="text-center max-w-3xl mx-auto">
+
+      <span
+        class="inline-block mb-3 px-4 py-1 text-xs font-semibold uppercase tracking-wide
+               text-orange-600 dark:text-orange-400
+               bg-orange-100/70 dark:bg-orange-500/10
+               rounded-full transition-colors duration-500"
+      >
+        Our Clients
+      </span>
+
+      <h1
+        class="text-3xl md:text-4xl font-bold
+               text-gray-900 dark:text-white
+               transition-colors duration-500"
+      >
+        Trusted by Growing & Enterprise Businesses
+      </h1>
+
+      <p
+        class="mt-4 text-gray-600 dark:text-gray-400 text-sm md:text-base
+               transition-colors duration-500"
+      >
+        We partner with organizations that value innovation, reliability, and long-term success. <br>
+        We delivered scalable, secure, and innovative services tailored to all of trusted customer and helped for their business growth.
+      </p>
+
+      <div class="mt-8 flex justify-center gap-4">
+        <a
+          routerLink="/contact"
+          class="bg-orange-500 hover:bg-orange-600
+                 text-white px-6 py-2.5 rounded-lg text-sm font-medium
+                 shadow-md hover:shadow-lg
+                 transition-all duration-300"
+        >
+          Get Started
+        </a>
+
+        <a
+          routerLink="/services"
+          class="border border-orange-300 dark:border-orange-500/40
+                 text-orange-600 dark:text-orange-400
+                 px-6 py-2.5 rounded-lg text-sm font-medium
+                 hover:bg-orange-100/70 dark:hover:bg-orange-500/10
+                 transition-all duration-300"
+        >
+          View Services
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Decorative Gradient Blur -->
+  <div
+    class="absolute -top-24 -right-24 w-72 h-72
+           bg-orange-400/30 dark:bg-orange-500/20
+           rounded-full blur-3xl"
+  ></div>
+</section>
+
+
+
+<section class="bg-gradient-to-br from-gray-950 via-slate-900 to-gray-900 border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-12 text-center">
+
+    <span class="text-sm font-semibold text-orange-400 uppercase tracking-wide">
+      About Our Customers
+    </span>
+
+    <h1 class="mt-2 text-3xl md:text-4xl font-bold text-white">
+      Our customers are our greatest strength.
+    </h1>
+
+    <p class="mt-4 max-w-3xl mx-auto text-gray-400 text-sm md:text-base">
+      We partner with businesses and individuals from diverse sectors, delivering customized solutions that create value, foster growth, and build lasting relationships.
+    </p>
+
+  </div>
+</section>
+
+
+
+
+<section class="bg-white">
+  <div class="max-w-7xl mx-auto px-6 py-14">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+      
+      <div class="flex justify-center" *ngFor="let client of clients">
+        <a [href]="client.href">
+        <img
+          [src]="client.logo"
+          [alt]="client.name"
+          class="h-12 hover:grayscale-0 hover:opacity-100 transition"
+        />
+        </a>
+        <!-- class="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-slate-900 border-t border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+      <div>
+        <h3 class="text-3xl font-bold text-indigo-400">20+</h3>
+        <p class="mt-2 text-sm text-gray-400">Happy Clients</p>
+      </div>
+
+      <div>
+        <h3 class="text-3xl font-bold text-indigo-400">50+</h3>
+        <p class="mt-2 text-sm text-gray-400">Projects Delivered</p>
+      </div>
+
+      <div>
+        <h3 class="text-3xl font-bold text-indigo-400">2+</h3>
+        <p class="mt-2 text-sm text-gray-400">Years Experience</p>
+      </div>
+
+      <div>
+        <h3 class="text-3xl font-bold text-indigo-400">99%</h3>
+        <p class="mt-2 text-sm text-gray-400">Client Satisfaction</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="bg-white">
+  <div class="max-w-7xl mx-auto px-6 py-14">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900">
+        What Our Clients Say
+      </h2>
+      <p class="mt-3 text-gray-600 text-sm">
+        Real feedback from our valued customers
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+        <p class="text-gray-600 text-sm">
+          “Their team delivered exactly what we needed on time and with great
+          attention to detail.”
+        </p>
+        <div class="mt-4">
+          <h4 class="font-semibold text-gray-900">Amit Verma</h4>
+          <span class="text-xs text-gray-500">Business Owner</span>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+        <p class="text-gray-600 text-sm">
+          “Professional, responsive, and reliable. Highly recommended for any
+          growing business.”
+        </p>
+        <div class="mt-4">
+          <h4 class="font-semibold text-gray-900">Neha Sharma</h4>
+          <span class="text-xs text-gray-500">Startup Founder</span>
+        </div>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+        <p class="text-gray-600 text-sm">
+          “Excellent service quality and long-term support. A great technology
+          partner.”
+        </p>
+        <div class="mt-4">
+          <h4 class="font-semibold text-gray-900">Rahul Singh</h4>
+          <span class="text-xs text-gray-500">Operations Manager</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
