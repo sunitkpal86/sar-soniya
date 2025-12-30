@@ -4,12 +4,16 @@ import { About } from './components/about/about';
 import { CeoDetails } from './components/ceo-details/ceo-details';
 import { Services } from './components/services/services';
 import { Customer } from './components/customer/customer';
+import { Career } from './components/career/career';
+import { Gallery } from './components/gallery/gallery';
 
 export const routes: Routes = [
     {path:'', component:Home},
     {path:'about', component:About},
     { path : 'ceo', component: CeoDetails},
     { path: 'services', component: Services},
-    { path: 'clients', component: Customer},
+    { path: 'customers', component: Customer},
+    { path: 'career', component: Career},
+    { path: 'gallery', component: Gallery},
 
 ];

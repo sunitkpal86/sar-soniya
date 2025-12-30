@@ -4,18 +4,18 @@
 
       <!-- Logo -->
       <div class="text-xl font-bold tracking-wide">
-        Sarsiddh Management Consultancy Pvt Ltd
+        Sarvsiddh Management Consultancy Pvt Ltd
       </div>
 
       <!-- Desktop Menu -->
       <nav class="hidden md:flex gap-8 font-medium">
         <a class="hover:text-blue-200" href="#">Home</a>
-        <a class="hover:text-blue-200" routerLink="about">About</a>
-        <a class="hover:text-blue-200" routerLink="services">Services</a>
-        <a class="hover:text-blue-200" routerLink="clients">Customers</a>
-        <a class="hover:text-blue-200" href="#services">Career</a>
-        <a class="hover:text-blue-200" href="#services">Gallery</a>
-        <a class="hover:text-blue-200" href="#contact">Contact</a>
+        <a class="hover:text-blue-200" href="about">About</a>
+        <a class="hover:text-blue-200" href="services">Services</a>
+        <a class="hover:text-blue-200" href="customers">Customers</a>
+        <a class="hover:text-blue-200" href="career">Career</a>
+        <a class="hover:text-blue-200" href="gallery">Gallery</a>
+        <a class="hover:text-blue-200" href="contact">Contact</a>
       </nav>
 
       <!-- Hamburger -->
@@ -34,9 +34,12 @@
     <!-- Mobile Menu -->
     <div *ngIf="isMenuOpen" class="md:hidden bg-blue-900/90 rounded-lg mt-2">
       <a class="block px-4 py-3 border-b border-blue-800" href="#">Home</a>
-      <a class="block px-4 py-3 border-b border-blue-800" routerLink="services">Services</a>
-      <a class="block px-4 py-3 border-b border-blue-800" routerLink="about">About</a>
-      <a class="block px-4 py-3 border-b border-blue-800" routerLink="clients">Customers</a>
+      <a class="block px-4 py-3 border-b border-blue-800" href="services">Services</a>
+      <a class="block px-4 py-3 border-b border-blue-800" href="about">About</a>
+      <a class="block px-4 py-3 border-b border-blue-800" href="customers">Customers</a>
+      <a class="block px-4 py-3 border-b border-blue-800" href="career">Career</a>
+      <a class="block px-4 py-3 border-b border-blue-800" href="gallery">Gallery</a>
+      <a class="block px-4 py-3 border-b border-blue-800" href="contact">Gallery</a>
       <a class="block px-4 py-3" href="#contact">Contact</a>
     </div>
 

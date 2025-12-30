@@ -1,1 +1,143 @@
-<p>career works!</p>
+
+<section #career class="py-20 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Page Header -->
+    <div class="text-center mb-10">
+      <h1 class="text-3xl font-bold text-gray-800">Find Your Dream Job</h1>
+      <!-- <p class="text-gray-600 mt-2">Search and apply for the latest opportunities</p> -->
+      <p class="text-gray-600 mt-2">Take time to understand what truly motivates you, build relevant skills, and stay open to learning. Use smart job searches, stay updated with industry trends, and connect with the right people. With focus, confidence, and persistence, your dream job isn’t just a possibility—it’s within reach. 🚀</p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="bg-white p-6 rounded-xl shadow mb-10">
+      <div class="grid md:grid-cols-3 gap-4">
+        <input
+          type="text"
+          [(ngModel)]="searchText"
+          placeholder="Job title or keyword"
+          class="border rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-indigo-500 outline-none"
+        />
+
+        <input
+          type="text"
+          [(ngModel)]="location"
+          placeholder="Location"
+          class="border rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-indigo-500 outline-none"
+        />
+
+        <button
+          class="bg-indigo-600 text-white rounded-lg px-6 py-3 hover:bg-indigo-700 transition font-semibold"
+        >
+          Search Jobs
+        </button>
+      </div>
+    </div>
+
+    <!-- Job List -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div
+        *ngFor="let job of filteredJobs()"
+        class="bg-white rounded-xl shadow hover:shadow-lg transition p-6 flex flex-col justify-between"
+      >
+        <div>
+          <h3 class="text-xl font-semibold text-gray-800">{{ job.title }}</h3>
+          <p class="text-gray-600 mt-1">{{ job.company }}</p>
+
+          <div class="flex flex-wrap gap-2 mt-4 text-sm">
+            <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full">
+              {{ job.location }}
+            </span>
+            <span class="bg-green-100 text-green-700 px-3 py-1 rounded-full">
+              {{ job.type }}
+            </span>
+            <span class="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full">
+              {{ job.experience }}
+            </span>
+          </div>
+        </div>
+
+        <button
+          class="mt-6 border border-indigo-600 text-indigo-600 rounded-lg py-2 font-medium hover:bg-indigo-600 hover:text-white transition"
+        >
+          Apply Now
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Empty State -->
+    <div
+      *ngIf="filteredJobs().length === 0"
+      class="text-center text-gray-500 mt-16"
+    >
+      No jobs found matching your criteria.
+    </div>
+
+  </div>
+</section>
+
+
+<section class="relative overflow-hidden">
+  <!-- Gradient Background -->
+  <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"></div>
+
+  <!-- Decorative Blurs -->
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>
+  <div class="absolute top-1/2 -right-24 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-7xl mx-auto px-6 py-24 text-white">
+
+    <!-- Heading -->
+    <div class="text-center">
+      <h1 class="text-4xl md:text-5xl font-bold">
+        Build Your Career With Us
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-white/90 max-w-2xl mx-auto">
+        Join our growing team and work on exciting projects across multiple domains.
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center">
+        <p class="text-4xl font-bold">45+</p>
+        <p class="mt-2 text-white/80">Open Positions</p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center">
+        <p class="text-4xl font-bold">10+</p>
+        <p class="mt-2 text-white/80">Teams</p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center">
+        <p class="text-4xl font-bold">5+</p>
+        <p class="mt-2 text-white/80">Locations</p>
+      </div>
+    </div>
+
+    <!-- Search Box -->
+    <div class="mt-16 bg-white rounded-xl shadow-lg p-4 max-w-3xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-4">
+        <input
+          type="text"
+          placeholder="Job title or keyword"
+          class="border rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-indigo-500 outline-none"
+        />
+        <input
+          type="text"
+          placeholder="Location"
+          class="border rounded-lg px-4 py-3 w-full focus:ring-2 focus:ring-indigo-500 outline-none"
+        />
+        <button
+          class="bg-indigo-600 text-white rounded-lg px-6 py-3 hover:bg-indigo-700 transition font-semibold"
+        >
+          Search Jobs
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
