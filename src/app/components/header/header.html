@@ -10,8 +10,8 @@
       <!-- Desktop Menu -->
       <nav class="hidden md:flex gap-8 font-medium">
         <a class="hover:text-blue-200" href="#">Home</a>
-        <a class="hover:text-blue-200" href="#about">About</a>
-        <a class="hover:text-blue-200" href="#services">Services</a>
+        <a class="hover:text-blue-200" routerLink="about">About</a>
+        <a class="hover:text-blue-200" routerLink="services">Services</a>
         <a class="hover:text-blue-200" href="#services">Customers</a>
         <a class="hover:text-blue-200" href="#services">Career</a>
         <a class="hover:text-blue-200" href="#services">Gallery</a>
@@ -34,8 +34,8 @@
     <!-- Mobile Menu -->
     <div *ngIf="isMenuOpen" class="md:hidden bg-blue-900/90 rounded-lg mt-2">
       <a class="block px-4 py-3 border-b border-blue-800" href="#">Home</a>
-      <a class="block px-4 py-3 border-b border-blue-800" href="#services">Services</a>
-      <a class="block px-4 py-3 border-b border-blue-800" href="#about">About</a>
+      <a class="block px-4 py-3 border-b border-blue-800" routerLink="services">Services</a>
+      <a class="block px-4 py-3 border-b border-blue-800" routerLink="about">About</a>
       <a class="block px-4 py-3" href="#contact">Contact</a>
     </div>
 
