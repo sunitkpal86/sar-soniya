@@ -18,31 +18,5 @@ export class About {
   setTab(tab: string) {
     this.activeTab = tab;
   }
-
-  teamMembers = [
-    {
-      name: 'Amit Sharma',
-      role: 'Founder & CEO',
-      desc: 'Visionary leader driving innovation and growth.',
-      img: 'https://i.pravatar.cc/150?img=11'
-    },
-    {
-      name: 'Neha Verma',
-      role: 'Project Manager',
-      desc: 'Ensures timely and quality project delivery.',
-      img: 'https://i.pravatar.cc/150?img=12'
-    },
-    {
-      name: 'Rahul Singh',
-      role: 'Lead Developer',
-      desc: 'Expert in modern scalable web applications.',
-      img: 'https://i.pravatar.cc/150?img=13'
-    },
-    {
-      name: 'Priya Mehta',
-      role: 'UI/UX Designer',
-      desc: 'Creates user-friendly and elegant designs.',
-      img: 'https://i.pravatar.cc/150?img=14'
-    }
-  ];
+  
 }
