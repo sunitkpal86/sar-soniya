@@ -1,0 +1,87 @@
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full z-50 bg-gradient-to-r from-indigo-700 via-purple-600 to-pink-600 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- LOGO -->
+      <div class="text-white text-xl font-bold tracking-wide">
+        Intell <span class="text-yellow-300"> Digix</span>
+      </div>
+
+      <!-- DESKTOP MENU -->
+      <div class="hidden md:flex items-center space-x-8 text-white font-medium">
+        <a href="#" class="hover:text-yellow-300 transition">Home</a>
+        <a href="#" class="hover:text-yellow-300 transition">Services</a>
+        <a href="#" class="hover:text-yellow-300 transition">Solutions</a>
+        <a href="#" class="hover:text-yellow-300 transition">Projects</a>
+        <a href="#" class="hover:text-yellow-300 transition">Contact</a>
+      </div>
+
+      <!-- CTA BUTTON (DESKTOP) -->
+      <div class="hidden md:block">
+        <button class="bg-yellow-400 text-indigo-900 px-5 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
+          Get Quote
+        </button>
+      </div>
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        (click)="toggleMenu()"
+        class="md:hidden text-white focus:outline-none"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE SIDEBAR BACKDROP -->
+<div
+  *ngIf="mobileMenuOpen"
+  class="fixed inset-0 bg-black/50 z-40"
+  (click)="closeMenu()"
+></div>
+
+<!-- MOBILE SIDEBAR -->
+<aside
+  class="fixed top-0 right-0 w-72 h-full bg-gradient-to-b from-indigo-700 via-purple-600 to-pink-600 z-50 transform transition-transform duration-300"
+  [class.translate-x-full]="!mobileMenuOpen"
+  [class.translate-x-0]="mobileMenuOpen"
+>
+  <div class="p-6 text-white">
+
+    <!-- HEADER -->
+    <div class="flex items-center justify-between mb-8">
+      <span class="text-lg font-bold">
+        Intell<span class="text-yellow-300">Digix</span>
+      </span>
+      <button (click)="closeMenu()">
+        ✕
+      </button>
+    </div>
+
+    <!-- MENU -->
+    <nav class="flex flex-col space-y-6 text-lg font-medium">
+      <a (click)="closeMenu()" href="#" class="hover:text-yellow-300">Home</a>
+      <a (click)="closeMenu()" href="#" class="hover:text-yellow-300">Services</a>
+      <a (click)="closeMenu()" href="#" class="hover:text-yellow-300">Solutions</a>
+      <a (click)="closeMenu()" href="#" class="hover:text-yellow-300">Projects</a>
+      <a (click)="closeMenu()" href="#" class="hover:text-yellow-300">Contact</a>
+    </nav>
+
+    <!-- CTA -->
+    <button
+      class="mt-10 w-full bg-yellow-400 text-indigo-900 py-3 rounded-xl font-semibold hover:bg-yellow-300 transition"
+    >
+      Get Quote
+    </button>
+  </div>
+</aside>
+
+<!-- SPACER FOR FIXED NAVBAR -->
+<div class="h-16"></div>

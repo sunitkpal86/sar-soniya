@@ -1,75 +1,90 @@
-<section #about class="bg-gray-50 py-16">
+<section class="bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-900 text-white py-20">
   <div class="max-w-7xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold text-gray-800">Meet Our Team</h2>
-    <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
-      Our team is a group of passionate professionals committed to delivering
-      excellence, innovation, and value to our clients.
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      About <span class="text-cyan-400">Us</span>
+    </h1>
+    <p class="mx-auto text-gray-300 text-lg">
+      Intell Digix Automation Pvt. Ltd., founded in 2012 by Mr. Sandeep Bishnoi, is a trusted name in the field of electrical panel manufacturing and industrial automation solutions. With a vision rooted in innovation and a commitment to engineering excellence, the company has grown into a globally recognized, ISO-certified organization serving over 1,500 clients worldwide.
     </p>
+    <p class="mx-auto text-gray-300 text-lg">What began as a specialized effort to manufacture electrical panel components for multi-industry applications has evolved into a dynamic enterprise offering cutting-edge control systems, automation, and electrical distribution solutions across various industrial sectors.</p>
   </div>
+</section>
 
-  <!-- Team Members -->
-  <div class="max-w-7xl mx-auto px-6 mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+<app-founder/>
 
-    <!-- Card -->
-    <div (mouseover)="setTab('ceo')" class="bg-white rounded-xl shadow hover:shadow-xl transition p-6 text-center">
-      <img 
-        src="assets/md-sid.jpg"
-        alt="Team Member"
-        class="w-28 h-28 mx-auto rounded-full object-cover"
-      />
-      <h3 class="mt-4 text-xl font-semibold text-gray-800">Mr. Shidharth Pandey</h3>
-      <p class="text-indigo-600 text-sm"> Managing Director & CEO</p>
-      <p class="mt-3 text-gray-600 text-sm">
-        Visionary leader driving innovation and long-term growth.
+<section class="py-20 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Text -->
+    <div>
+      <h2 class="text-3xl font-semibold mb-6 text-slate-800">
+        What We Do
+      </h2>
+      <p class="text-slate-600 leading-relaxed mb-6">
+        At Intell Digix Automation Pvt. Ltd., we offer comprehensive electro-mechanical solutions that go far beyond power distribution. Our integrated systems are engineered to enhance equipment safety, operational efficiency, and process automation for a wide range of industries.
+      </p>
+      <p class="text-slate-600 leading-relaxed">
+        With a skilled engineering team and modern infrastructure,
+        we ensure every system meets global quality and safety standards.
       </p>
     </div>
 
-    <div (mouseover)="setTab('cfo')" class="bg-white rounded-xl shadow hover:shadow-xl transition p-6 text-center">
-      <img 
-        src="assets\dir-nishant.jpg"
-        alt="Team Member"
-        class="w-28 h-28 mx-auto rounded-full object-cover"
-      />
-      <h3 class="mt-4 text-xl font-semibold text-gray-800">Mr. Nishant Ojha</h3>
-      <p class="text-indigo-600 text-sm">Director & CFO</p>
-      <p class="mt-3 text-gray-600 text-sm">
-        Ensures timely delivery with quality and precision.
-      </p>
-    </div>
-
-    <div (mouseover)="setTab('coo')" class="bg-white rounded-xl shadow hover:shadow-xl transition p-6 text-center">
-      <img 
-        src="assets\coo-balran.jpg"
-        alt="Team Member"
-        class="w-28 h-28 mx-auto rounded-full object-cover"
-      />
-      <h3 class="mt-4 text-xl font-semibold text-gray-800">Dr. Balram Kumar</h3>
-      <p class="text-indigo-600 text-sm">Director & COO</p>
-      <p class="mt-3 text-gray-600 text-sm">
-        Expert in scalable, secure, and modern web solutions.
-      </p>
-    </div>
-
-    <div (mouseover)="setTab('hra')" class="bg-white rounded-xl shadow hover:shadow-xl transition p-6 text-center">
-      <img
-        src="assets\komal.png"
-        alt="Team Member"
-        class="w-28 h-28 mx-auto rounded-full object-cover"
-      />
-      <h3 class="mt-4 text-xl font-semibold text-gray-800">Komal Pandey</h3>
-      <p class="text-indigo-600 text-sm">HR Manager</p>
-      <p class="mt-3 text-gray-600 text-sm">
-        Designs intuitive and engaging user experiences.
-      </p>
+    <!-- Image Placeholder -->
+    <div class="relative">
+      <div class="h-80 bg-gradient-to-br from-indigo-500 to-cyan-400 rounded-2xl shadow-lg"></div>
+      <div class="absolute inset-0 bg-black/10 rounded-2xl"></div>
     </div>
 
   </div>
 </section>
 
 
-    <div class="bg-white rounded-xl shadow p-6">
-      <app-ceo-details *ngIf="activeTab === 'ceo'"></app-ceo-details>
-      <app-cfo-details *ngIf="activeTab === 'cfo'"></app-cfo-details>
-      <app-coo-details *ngIf="activeTab === 'coo'"></app-coo-details>
-      <app-hra-details *ngIf="activeTab === 'hra'"></app-hra-details>
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-14">
+      <h2 class="text-3xl font-bold text-slate-800">
+        Why Choose Us
+      </h2>
+      <p class="text-slate-500 mt-3">
+        Core values that define our engineering excellence
+      </p>
     </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-4 text-indigo-600">⚡</div>
+        <h3 class="text-lg font-semibold mb-2">Quality & Safety</h3>
+        <p class="text-sm text-slate-600">
+          Compliance-driven manufacturing with strict quality checks.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-4 text-indigo-600">🛠️</div>
+        <h3 class="text-lg font-semibold mb-2">Custom Engineering</h3>
+        <p class="text-sm text-slate-600">
+          Panels and automation systems tailored to project needs.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-4 text-indigo-600">🤖</div>
+        <h3 class="text-lg font-semibold mb-2">Smart Automation</h3>
+        <p class="text-sm text-slate-600">
+          PLC, SCADA, VFD, and intelligent control solutions.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-4xl mb-4 text-indigo-600">🤝</div>
+        <h3 class="text-lg font-semibold mb-2">Reliable Support</h3>
+        <p class="text-sm text-slate-600">
+          On-time delivery and long-term technical assistance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
